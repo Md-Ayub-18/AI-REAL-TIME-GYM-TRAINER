@@ -2,9 +2,21 @@
    GLOBAL THEME
 ========================================================= */
 
-
-#MainMenu, header, footer {
+#MainMenu, footer {
     visibility: hidden;
+}
+
+header {
+    visibility: visible !important;
+    background: transparent !important;
+}
+
+/* cover both old and new Streamlit sidebar-toggle testids */
+[data-testid="stSidebarCollapsedControl"],
+[data-testid="collapsedControl"],
+button[kind="header"] {
+    visibility: visible !important;
+    display: flex !important;
 }
 
 [data-testid="stAppDeployButton"] {
